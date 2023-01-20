@@ -23,6 +23,16 @@ var counter = 0;
     function randomPage() {
         return mcqPages[Math.floor(Math.random() * mcqPages.length)];
     }
+    function fun(click){
+    if(click==4){
+    document.getElementById('4').style.backgroundColor = "#32cd32"; 
+    } 
+    else{
+    document.getElementById(click).style.backgroundColor = "red";  
+    }
+    setTimeout(checkAnswer,2000,click);  
+}
+
     
     function checkAnswer(answer) {
     
