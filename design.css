@@ -18,7 +18,7 @@
             height: 100px;
             font-size: 20px;
             margin: 10px;
-            background-color: #4CAF50;
+            background-color: #2926ce;
             color: white;
             border: none;
             cursor: pointer;
@@ -26,5 +26,5 @@
 
         /* Add hover effect for the buttons */
         button:hover {
-            background-color: #3e8e41;
+            background-color: #7293ef;
         }
