@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix Quiz</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <h1>What is the capital of Gujarat?</h1>
+    <div class="container">
+        <button id=1 onclick="checkAnswer(this.id)">Gandhinagar</button>
+        <button id=2 onclick="checkAnswer(this.id)">Ahemadabad</button>
+        <button id=3 onclick="checkAnswer(this.id)">Berlin</button>
+        <button id=4 onclick="checkAnswer(this.id)">Rome</button>
+    </div>
+</body>
+
+<script>
+
+var counter = 0;
+    
+    const mcqPages = ["1st.html", "2nd.html", "3rd.html", "5th.html", "6th.html"];
+    
+    function randomPage() {
+        return mcqPages[Math.floor(Math.random() * mcqPages.length)];
+    }
+    
+    function checkAnswer(answer) {
+    
+        if (answer == 2) {
+    
+            counter = counter + 1;
+            localStorage.setItem("counter", counter);
+            console.log(counter);
+            if (counter == 3) {
+                
+                location.href = "final.html";
+                
+            }
+            else {
+                location.href = randomPage();
+            }
+        } 
+        else {
+            localStorage.setItem("counter", 0);
+            console.log(counter);
+            location.href = randomPage();
+        }
+    }
+
+    window.onload = function() {
+    counter = Number(localStorage.getItem("counter")) || 0;
+    }
+    </script>
+
+</html>
